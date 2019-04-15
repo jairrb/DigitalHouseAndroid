@@ -1,4 +1,4 @@
-package br.com.digitalhouse.Aula8.exercicios;
+package br.com.digitalhouse.Aula8.exercicio1;
 
 public class Professor implements Docente {
     private int rd;
@@ -7,6 +7,9 @@ public class Professor implements Docente {
     public Professor(int rd, String nome) {
         this.rd = rd;
         this.nome = nome;
+    }
+
+    public Professor() {
     }
 
     public int getRd() {
@@ -27,11 +30,12 @@ public class Professor implements Docente {
 
     @Override
     public void darAulas() {
+        System.out.println("Professor " + this.nome + " dando aula..." );
 
     }
 
     @Override
     public void fazerChamada() {
-
+        System.out.println("Professor " + this.nome + " fazendo chamada..." );
     }
 }

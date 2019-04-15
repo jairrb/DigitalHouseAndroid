@@ -1,6 +1,7 @@
-package br.com.digitalhouse.Aula8.exercicios;
+package br.com.digitalhouse.Aula8.exercicio1;
 
 public interface Docente {
     void darAulas();
+
     void fazerChamada();
 }

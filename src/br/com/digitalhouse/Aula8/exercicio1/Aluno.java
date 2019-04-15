@@ -1,4 +1,4 @@
-package br.com.digitalhouse.Aula8.exercicios;
+package br.com.digitalhouse.Aula8.exercicio1;
 
 public class Aluno {
     private int ra;
@@ -10,7 +10,8 @@ public class Aluno {
         this.nome = nome;
         this.sobrenome = sobrenome;
     }
-    public Aluno(){
+
+    public Aluno() {
     }
 
     public int getRa() {
@@ -37,11 +38,11 @@ public class Aluno {
         this.sobrenome = sobrenome;
     }
 
-    public void assitirAula(Aula aula){
-        System.out.println("Aluno "+this.nome+" assistindo "+aula.getMateria());
+    public void assitirAula() {
+        System.out.println("Aluno " + this.nome + " assistindo aula..." );
     }
 
-    public void fazerLicao(){
+    public void fazerLicao() {
         System.out.println("Licao feita");
     }
 

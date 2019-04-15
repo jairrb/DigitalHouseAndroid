@@ -1,4 +1,4 @@
-package br.com.digitalhouse.Aula8.exercicios;
+package br.com.digitalhouse.Aula8.exercicio1;
 
 public class Aula {
     private Materia materia;
