@@ -1,6 +1,6 @@
 package br.com.digitalhouse.Aula7.exercicio.voador;
 
-public class SuperHomem implements Voador{
+public class SuperHomem implements Voador {
     private int experiencia;
 
     public SuperHomem(int experiencia) {

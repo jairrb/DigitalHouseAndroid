@@ -9,9 +9,9 @@ public class Santander {
         cliente.setNumeroCPF("999.888.777.666-55");
         cliente.setNumeroRG("99.000.777-X");
 
-        ContaCorrente contaCorrente = new ContaCorrente(1000.00,cliente,100.00);
-        ContaPoupanca contaPoupanca = new ContaPoupanca(0.60,cliente,1000.00);
-        Cheque cheque = new Cheque(1500.00,"Itau","20190410");
+        ContaCorrente contaCorrente = new ContaCorrente(1000.00, cliente, 100.00);
+        ContaPoupanca contaPoupanca = new ContaPoupanca(0.60, cliente, 1000.00);
+        Cheque cheque = new Cheque(1500.00, "Itau", "20190410");
 
         contaPoupanca.depositarDinheiro(150.00);
         contaPoupanca.recolherJuros();

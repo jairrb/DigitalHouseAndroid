@@ -1,6 +1,6 @@
 package br.com.digitalhouse.Aula6.tarefa2;
 
-public class CamaroteInferior extends Vip{
+public class CamaroteInferior extends Vip {
     private String localizacao = "A1";
 
     public String getLocalizacao() {

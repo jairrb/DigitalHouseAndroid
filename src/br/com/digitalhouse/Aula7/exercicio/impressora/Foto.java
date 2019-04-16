@@ -1,6 +1,6 @@
 package br.com.digitalhouse.Aula7.exercicio.impressora;
 
-public class Foto implements Imprimivel{
+public class Foto implements Imprimivel {
     private String nome;
     private String tipo;
 
@@ -27,6 +27,6 @@ public class Foto implements Imprimivel{
 
     @Override
     public void imprimir() {
-        System.out.println("Sou uma selfie "+this.nome+"."+this.tipo);
+        System.out.println("Sou uma selfie " + this.nome + "." + this.tipo);
     }
 }

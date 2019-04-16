@@ -4,7 +4,7 @@ public abstract class Conta {
     private Cliente cliente;
     private Double saldo;
 
-    public Conta(Cliente cliente, Double saldo){
+    public Conta(Cliente cliente, Double saldo) {
         this.cliente = cliente;
         this.saldo = saldo;
     }
@@ -25,17 +25,17 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
-    public void depositarDinheiro(Double valorDeposito){
+    public void depositarDinheiro(Double valorDeposito) {
         System.out.println("----- Deposito  -----");
         this.saldo += valorDeposito;
-        System.out.println(" Seu novo saldo e de: "+this.saldo);
+        System.out.println(" Seu novo saldo e de: " + this.saldo);
     }
 
-    public void sacarDinheiro(Double valorSaque){
+    public void sacarDinheiro(Double valorSaque) {
         System.out.println("----- Saque  -----");
         if (this.saldo >= valorSaque) {
             this.saldo -= valorSaque;
-            System.out.println(" Seu novo saldo e de: "+this.saldo);
+            System.out.println(" Seu novo saldo e de: " + this.saldo);
         } else {
             System.out.println("Saldo não disponivel");
         }

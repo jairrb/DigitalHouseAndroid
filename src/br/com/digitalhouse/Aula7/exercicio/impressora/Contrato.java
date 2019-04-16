@@ -1,6 +1,6 @@
 package br.com.digitalhouse.Aula7.exercicio.impressora;
 
-public class Contrato implements Imprimivel{
+public class Contrato implements Imprimivel {
     private String nome;
     private String tipo;
 
@@ -27,6 +27,6 @@ public class Contrato implements Imprimivel{
 
     @Override
     public void imprimir() {
-        System.out.println("Sou um contrato legal "+this.nome+"."+this.tipo);
+        System.out.println("Sou um contrato legal " + this.nome + "." + this.tipo);
     }
 }

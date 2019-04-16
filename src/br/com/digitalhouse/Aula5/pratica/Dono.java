@@ -5,15 +5,16 @@ public class Dono {
     public String sexo;
 
     public void alimentar(Cachorro cachorro) {
-        System.out.println("Olá " + cachorro.nome + " " + cachorro.raca );
+        System.out.println("Olá " + cachorro.nome + " " + cachorro.raca);
     }
+
     //contrutor especifico
-    public Dono(String nomeDono){
+    public Dono(String nomeDono) {
         this.nome = nomeDono;
     }
 
     //contrutor padrao
-    public Dono(){
+    public Dono() {
 
     }
 

@@ -11,7 +11,7 @@ public class Ingresso {
         this.valor = valor;
     }
 
-    public void imprimeValor(){
-        System.out.println("Valor do ingresso: "+this.valor);
+    public void imprimeValor() {
+        System.out.println("Valor do ingresso: " + this.valor);
     }
 }

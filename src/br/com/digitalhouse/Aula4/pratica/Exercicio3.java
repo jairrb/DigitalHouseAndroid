@@ -1,4 +1,5 @@
 package br.com.digitalhouse.Aula4.pratica;
+
 import java.util.Scanner;
 
 public class Exercicio3 {
@@ -11,7 +12,7 @@ public class Exercicio3 {
 
     }
 
-    public static boolean VerificaImpar(Integer a){
+    public static boolean VerificaImpar(Integer a) {
         return (a % 2) == 1 && a > 10;
     }
 }

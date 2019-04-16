@@ -6,8 +6,7 @@ public class Filho {
     private String nome;
 
     //contrutor especifico
-    public Filho(String nomeMae,String nomePai, String nomeFilho)
-    {
+    public Filho(String nomeMae, String nomePai, String nomeFilho) {
         this.mae = nomeMae;
         this.pai = nomePai;
         this.nome = nomeFilho;
@@ -17,23 +16,27 @@ public class Filho {
     public String getMae() {
         return mae;
     }
+
     //Get Pai
     public String getPai() {
         return pai;
     }
+
     //Get Filho
     public String getNome() {
         return nome;
     }
 
     //Set Mae
-    public void setMae(String nomeMae){
+    public void setMae(String nomeMae) {
         this.mae = nomeMae;
     }
+
     //Set Pai
-    public void setPai(String nomePai){
+    public void setPai(String nomePai) {
         this.pai = nomePai;
     }
+
     //Set Filho
     public void setNome(String nome) {
         this.nome = nome;

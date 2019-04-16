@@ -22,19 +22,20 @@ public class Tripe {
         this.alturaAtual = alturaAtual;
     }
 
-    public void dobrar(){
+    public void dobrar() {
         this.dobrado = true;
     }
-    public void desdobrar(){
+
+    public void desdobrar() {
         this.dobrado = false;
     }
 
-    public void guardar(){
+    public void guardar() {
         dobrar();
         this.alturaAtual = this.alturaMinima;
     }
 
-    public boolean prontoParaGuardar(){
+    public boolean prontoParaGuardar() {
         return isDobrado() && (this.alturaAtual == this.alturaMinima);
     }
 

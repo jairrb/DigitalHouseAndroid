@@ -13,10 +13,11 @@ public class Exercicio6 {
         System.out.println(RetPares(valores));
 
     }
-    public static ArrayList<Integer> RetPares(int[] valores){
+
+    public static ArrayList<Integer> RetPares(int[] valores) {
         ArrayList<Integer> valRet = new ArrayList<Integer>();
 
-        for(int i = 0; i < valores.length; i++){
+        for (int i = 0; i < valores.length; i++) {
             if ((valores[i] % 2) == 0) {
                 valRet.add(valores[i]);
             }

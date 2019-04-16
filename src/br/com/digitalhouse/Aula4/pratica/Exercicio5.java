@@ -11,17 +11,18 @@ public class Exercicio5 {
         System.out.println(SomaPares(valores));
 
     }
-    public static int SomaPares(int[] valores){
+
+    public static int SomaPares(int[] valores) {
         int valRet = 0;
 
-        for(int i = 0; i < valores.length; i++){
+        for (int i = 0; i < valores.length; i++) {
             if ((valores[i] % 2) == 0) {
                 valRet += valores[i];
             }
         }
 
 
-        return  valRet;
+        return valRet;
 
     }
 }

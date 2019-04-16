@@ -19,7 +19,7 @@ public class Principal {
                 if (opcao > 0 && opcao < 5) {
                     processar(opcao);
 
-                }else if ( opcao > 5){
+                } else if (opcao > 5) {
                     System.out.println("Opção inválida!");
                     opcao = -1;
                 }
@@ -30,8 +30,9 @@ public class Principal {
         }
 
     }
+
     public static void processar(int opcaoSelecionada) {
-        switch(opcaoSelecionada){
+        switch (opcaoSelecionada) {
             case 1:
                 System.out.println("---- Operacao Soma ----");
                 break;
@@ -64,22 +65,22 @@ public class Principal {
             System.exit(1);
         }
 
-        switch(opcaoSelecionada){
+        switch (opcaoSelecionada) {
             case 1:
                 Soma soma = new Soma();
-                System.out.println("Resultado da soma: "+soma.Calcula(a,b));
+                System.out.println("Resultado da soma: " + soma.Calcula(a, b));
                 break;
             case 2:
                 Subtracao subtracao = new Subtracao();
-                System.out.println("Resultado da subtracao: "+subtracao.Calcula(a,b));
+                System.out.println("Resultado da subtracao: " + subtracao.Calcula(a, b));
                 break;
             case 3:
                 Multiplicacao multiplica = new Multiplicacao();
-                System.out.println("Resultado da multiplicacao: "+multiplica.Calcula(a,b));
+                System.out.println("Resultado da multiplicacao: " + multiplica.Calcula(a, b));
                 break;
             case 4:
                 Divisao divisao = new Divisao();
-                System.out.println("Resultado da divisao: "+divisao.Calcula(a,b));
+                System.out.println("Resultado da divisao: " + divisao.Calcula(a, b));
                 break;
         }
         System.exit(0);

@@ -5,7 +5,7 @@ public class Atleta {
     private int nivel;
     private int energia;
 
-    public Atleta (String nomeAtleta, int nivelAtleta, int energiaAtleta){
+    public Atleta(String nomeAtleta, int nivelAtleta, int energiaAtleta) {
         this.nome = nomeAtleta;
         this.nivel = nivelAtleta;
         this.energia = energiaAtleta;

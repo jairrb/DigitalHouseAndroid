@@ -1,15 +1,15 @@
 package br.com.digitalhouse.Aula7.pratica;
 
-public class Aviao implements Voador{
+public class Aviao implements Voador {
     private String tipoDeAsa;
     private int qtdAssentos;
 
-    public Aviao(String tipoAsa, int qtd){
+    public Aviao(String tipoAsa, int qtd) {
         this.tipoDeAsa = tipoAsa;
         this.qtdAssentos = qtd;
     }
 
-    public Aviao(){
+    public Aviao() {
     }
 
     public String getTipoDeAsa() {

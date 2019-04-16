@@ -1,8 +1,9 @@
 package br.com.digitalhouse.Aula4.pratica;
+
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Hello World");
         Integer umNumeroA;
         Double umNumeroB;
@@ -15,8 +16,8 @@ public class Main {
         System.out.println(umNumeroA);
         System.out.println(umNumeroB);
         System.out.println(umaCadeiaDeTexto);
-        System.out.println("Soma de A + B = "+(umNumeroA+umNumeroB));
-        System.out.println("Diferença entre A e B = "+Math.abs(umNumeroA-umNumeroB));
+        System.out.println("Soma de A + B = " + (umNumeroA + umNumeroB));
+        System.out.println("Diferença entre A e B = " + Math.abs(umNumeroA - umNumeroB));
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite um numero: ");

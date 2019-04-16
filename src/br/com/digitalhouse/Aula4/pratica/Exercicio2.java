@@ -1,4 +1,5 @@
 package br.com.digitalhouse.Aula4.pratica;
+
 import java.util.Scanner;
 
 public class Exercicio2 {
@@ -11,11 +12,11 @@ public class Exercicio2 {
         System.out.println("Digite o segundo numero: ");
         umNumeroB = scanner.nextInt();
 
-        System.out.println(VerificaMenor(umNumeroA,umNumeroB));
+        System.out.println(VerificaMenor(umNumeroA, umNumeroB));
 
     }
 
-    public static boolean VerificaMenor(Integer a, Integer b){
+    public static boolean VerificaMenor(Integer a, Integer b) {
         return (a < b);
     }
 }

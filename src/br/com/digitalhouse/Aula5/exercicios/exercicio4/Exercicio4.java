@@ -12,9 +12,9 @@ public class Exercicio4 {
         tripe.desdobrar();
 
         tripe.usar();
-        System.out.println("Tripe pronto para usar? "+tripe.prontoParaUsar());
+        System.out.println("Tripe pronto para usar? " + tripe.prontoParaUsar());
 
         tripe.guardar();
-        System.out.println("Tripe pronto para guardar? "+tripe.prontoParaGuardar());
+        System.out.println("Tripe pronto para guardar? " + tripe.prontoParaGuardar());
     }
 }

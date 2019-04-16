@@ -4,7 +4,7 @@ public class Prova {
     private int dificuldade;
     private int energiaNecessaria;
 
-    public Prova(int dificuldadeProva,int energiaNecessariaProva){
+    public Prova(int dificuldadeProva, int energiaNecessariaProva) {
         this.dificuldade = dificuldadeProva;
         this.energiaNecessaria = energiaNecessariaProva;
     }
@@ -19,10 +19,10 @@ public class Prova {
 
     public void melhorNaProva(Atleta atleta1, Atleta atleta2) {
 
-        if (podeRealizar(atleta1) && !podeRealizar(atleta2) ) {
-            System.out.println("Atleta "+atleta1.getNome()+" melhor!");
-        } else if (!podeRealizar(atleta1) && podeRealizar(atleta2) ){
-            System.out.println("Atleta "+atleta2.getNome()+" melhor!");
+        if (podeRealizar(atleta1) && !podeRealizar(atleta2)) {
+            System.out.println("Atleta " + atleta1.getNome() + " melhor!");
+        } else if (!podeRealizar(atleta1) && podeRealizar(atleta2)) {
+            System.out.println("Atleta " + atleta2.getNome() + " melhor!");
         } else {
             System.out.println("Empate!!!");
         }

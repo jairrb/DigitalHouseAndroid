@@ -5,7 +5,7 @@ public class Cheque {
     private String bancoEmissor;
     private String dataPagto;
 
-    public Cheque(Double valor,String bancoEmissor,String dataPagto){
+    public Cheque(Double valor, String bancoEmissor, String dataPagto) {
         this.valor = valor;
         this.bancoEmissor = bancoEmissor;
         this.dataPagto = dataPagto;

@@ -1,6 +1,6 @@
 package br.com.digitalhouse.Aula7.exercicio.impressora;
 
-public class Documento implements Imprimivel{
+public class Documento implements Imprimivel {
     private String nome;
     private String tipo;
 
@@ -27,6 +27,6 @@ public class Documento implements Imprimivel{
 
     @Override
     public void imprimir() {
-        System.out.println("Sou um documento do Word "+this.nome+"."+this.tipo);
+        System.out.println("Sou um documento do Word " + this.nome + "." + this.tipo);
     }
 }

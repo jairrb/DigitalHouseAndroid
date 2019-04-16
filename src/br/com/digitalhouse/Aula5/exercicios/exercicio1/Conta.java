@@ -5,7 +5,7 @@ public class Conta {
     private double saldo;
     private Cliente cliente;
 
-    public Conta(String numeroConta,double saldoCliente,Cliente clienteConta){
+    public Conta(String numeroConta, double saldoCliente, Cliente clienteConta) {
         this.numConta = numeroConta;
         this.saldo = saldoCliente;
         this.cliente = clienteConta;
@@ -27,15 +27,15 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public void deposito(double valorDeposito){
-        System.out.println("Deposito realizado cliente "+this.cliente.getNome()+", novo saldo: "+(this.saldo+valorDeposito));
+    public void deposito(double valorDeposito) {
+        System.out.println("Deposito realizado cliente " + this.cliente.getNome() + ", novo saldo: " + (this.saldo + valorDeposito));
     }
 
-    public void saque(double valorSaque){
+    public void saque(double valorSaque) {
         if (valorSaque > this.saldo) {
-            System.out.println("Saldo Insuficiente cliente "+this.cliente.getNome()+"!");
+            System.out.println("Saldo Insuficiente cliente " + this.cliente.getNome() + "!");
         } else {
-            System.out.println("Saque realizado cliente "+this.cliente.getNome()+", saldo restante: " + (this.saldo - valorSaque));
+            System.out.println("Saque realizado cliente " + this.cliente.getNome() + ", saldo restante: " + (this.saldo - valorSaque));
         }
     }
 }

@@ -7,7 +7,7 @@ public class JogadorDeFutebol {
     private int gols;
     private int experiencia;
 
-    public JogadorDeFutebol (String nomeJogador){
+    public JogadorDeFutebol(String nomeJogador) {
         this.nome = nomeJogador;
     }
 
@@ -51,13 +51,14 @@ public class JogadorDeFutebol {
         this.experiencia = experiencia;
     }
 
-    public void fazerGol(){
+    public void fazerGol() {
         this.energia -= 5;
         this.alegria += 10;
         this.gols += 1;
         System.out.println("GOOOOL!");
     }
-    public void correr(){
+
+    public void correr() {
         this.energia -= 10;
         System.out.println("Cansei");
     }
