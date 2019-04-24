@@ -48,7 +48,8 @@ public class Principal {
                 System.out.println("---- Cadastrar Livro ----");
                 biblioteca.cadastrarLivro();
             case 2:
-                System.out.println("---- Operacao Subtracao ----");
+                System.out.println("---- Consultar Livro ----");
+                biblioteca.consultarLivro();
                 break;
             case 3:
                 System.out.println("---- Operacao Multiplicacao ----");
@@ -57,8 +58,5 @@ public class Principal {
                 System.out.println("---- Operacao Divisao ----");
                 break;
         }
-
-
-
     }
 }

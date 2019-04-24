@@ -1,5 +1,7 @@
 package br.com.digitalhouse.Integrador;
 
+import java.util.Objects;
+
 public class Livro {
     private String codigo;
     private String titulo;
@@ -72,5 +74,30 @@ public class Livro {
 
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Livro livro = (Livro) o;
+        return Objects.equals(codigo, livro.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(codigo);
+    }
+
+    @Override
+    public String toString() {
+        return  "Codigo: " + codigo +
+                "\nTitulo: " + titulo +
+                "\nAutor: " + autor +
+                "\nLancamento: " + lancamento +
+                "\nQuantidade Estoque: " + qtdestoque +
+                "\nISBN: " + ISBN +
+                "\nPreco: " + preco+"\n";
     }
 }
