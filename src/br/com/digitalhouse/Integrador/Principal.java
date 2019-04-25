@@ -47,15 +47,14 @@ public class Principal {
             case 1:
                 System.out.println("---- Cadastrar Livro ----");
                 biblioteca.cadastrarLivro();
+                break;
             case 2:
                 System.out.println("---- Consultar Livro ----");
                 biblioteca.consultarLivro();
                 break;
             case 3:
-                System.out.println("---- Operacao Multiplicacao ----");
-                break;
-            case 4:
-                System.out.println("---- Operacao Divisao ----");
+                System.out.println("---- Venda Livro ----");
+                biblioteca.venderLivro();
                 break;
         }
     }

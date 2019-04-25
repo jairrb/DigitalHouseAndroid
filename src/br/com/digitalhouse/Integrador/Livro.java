@@ -9,9 +9,9 @@ public class Livro {
     private int lancamento;
     private int qtdestoque;
     private String ISBN;
-    private double preco;
+    private Double preco;
 
-    public Livro(String codigo, String titulo, String autor, int lancamento, int qtdestoque, String ISBN, double preco) {
+    public Livro(String codigo, String titulo, String autor, int lancamento, int qtdestoque, String ISBN, Double preco) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.autor = autor;
@@ -68,12 +68,26 @@ public class Livro {
         this.qtdestoque = qtdestoque;
     }
 
-    public Livro(double preco) {
+    public Livro(Double preco) {
         this.preco = preco;
     }
 
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
+    }
+
+    public void baixaQuantidade(int quantidade){
+        if (quantidade > this.qtdestoque ){
+            System.out.println("Quantidade nao disponivel em estoque!"+
+                                "\nEstoque atual: "+this.qtdestoque);
+        }else{
+
+            this.qtdestoque -= quantidade;
+            System.out.println( "Quantidade vendida: "+quantidade+
+                                "\n Quantidade restante em estoque: "+this.qtdestoque+"\n");
+        }
+
+
     }
 
     @Override
@@ -92,12 +106,12 @@ public class Livro {
 
     @Override
     public String toString() {
-        return  "Codigo: " + codigo +
+        return "Codigo: " + codigo +
                 "\nTitulo: " + titulo +
                 "\nAutor: " + autor +
                 "\nLancamento: " + lancamento +
                 "\nQuantidade Estoque: " + qtdestoque +
                 "\nISBN: " + ISBN +
-                "\nPreco: " + preco+"\n";
+                "\nPreco: " + preco + "\n";
     }
 }

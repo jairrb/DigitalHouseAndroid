@@ -26,47 +26,43 @@ public class Biblioteca {
         int lancamento;
         int qtdestoque;
         String ISBN;
-        double preco;
+        Double preco;
 
         try {
-            Scanner scannerA = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
+
             System.out.println("Digite o codigo: ");
-            codigo = scannerA.next();
+            codigo = scanner.next();
 
-            Scanner scannerB = new Scanner(System.in);
             System.out.println("Digite o titulo: ");
-            titulo = scannerB.next();
+            titulo = scanner.next();
 
-            Scanner scannerC = new Scanner(System.in);
             System.out.println("Digite o Autor: ");
-            autor = scannerC.next();
+            autor = scanner.next();
 
-            Scanner scannerD = new Scanner(System.in);
             System.out.println("Digite o ano de lancamento: ");
-            lancamento = scannerD.nextInt();
+            lancamento = scanner.nextInt();
 
-            Scanner scannerE = new Scanner(System.in);
             System.out.println("Digite a quantidade: ");
-            qtdestoque = scannerE.nextInt();
+            qtdestoque = scanner.nextInt();
 
-            Scanner scannerF = new Scanner(System.in);
             System.out.println("Digite o codigo ISBN: ");
-            ISBN = scannerF.next();
+            ISBN = scanner.next();
 
-            Scanner scannerG = new Scanner(System.in);
             System.out.println("Digite o preco: ");
-            preco = scannerG.nextDouble();
+            preco = scanner.nextDouble();
 
             Livro livro = new Livro(codigo, titulo, autor, lancamento, qtdestoque, ISBN, preco);
 
             if (livros.contains(livro)) {
-                System.out.println("Codigo de livro já cadastrado!");
+                System.out.println("Codigo de livro já cadastrado!\n");
             } else {
                 this.livros.add(livro);
+                System.out.println("Livro adicionado!\n");
             }
 
         } catch (Exception e) {
-            System.out.println("ERRO AO CADASTRAR");
+            System.out.println("ERRO AO CADASTRAR"+e.getMessage());
         }
 
     }
@@ -82,6 +78,27 @@ public class Biblioteca {
         if (posLivro != -1) {
                 System.out.println("--- LIVRO ---");
                 System.out.println(livros.get(posLivro).toString());
+        }else{
+            System.out.println("LIVRO NÃO ENCONTRADO! \n");
+        }
+    }
+
+    public void venderLivro() {
+        String codigo;
+        Scanner scannerA = new Scanner(System.in);
+        System.out.println("Digite o codigo: ");
+        codigo = scannerA.next();
+
+        int posLivro = consultarCodigo(codigo);
+
+        if (posLivro != -1) {
+            int quantidade;
+            Scanner scannerB = new Scanner(System.in);
+            System.out.println("Digite a quantidade: ");
+            quantidade = scannerB.nextInt();
+
+            System.out.println("--- VENDA LIVRO ---");
+            livros.get(posLivro).baixaQuantidade(quantidade);
         }else{
             System.out.println("LIVRO NÃO ENCONTRADO! \n");
         }
