@@ -6,7 +6,7 @@ public class Principal {
     public static void main(String[] args) {
 
         Livro livro1 = new Livro("A0001","JAVA PARA INICIANTES","JESSICA",2017,2,"999999999-9", 24.99);
-        Livro livro2 = new Livro("A0002","ANDROID PARA INICIANTES","TAIRO",2016,5,"888888888-9", 24.99);
+        Livro livro2 = new Livro("A0002","ANDROID PARA INICIANTES","TAIRO",2016,5,"888888888-8", 24.99);
 
         Biblioteca biblioteca = new Biblioteca();
         biblioteca.addLivro(livro1);
@@ -15,20 +15,18 @@ public class Principal {
         Scanner in = new Scanner(System.in);
         int opcao = 0;
 
-        while (opcao != 6) {
+        while (opcao != 4) {
             System.out.println("Selecione uma operacao");
             System.out.println("1 - Cadastrar Livro");
             System.out.println("2 - Consultar Livro");
             System.out.println("3 - Venda Livro");
-            System.out.println("4 - Cadastrar Coleção");
-            System.out.println("5 - Venda Coleção");
-            System.out.println("6 - Sair");
+            System.out.println("4 - Sair");
             try {
                 opcao = Integer.parseInt(in.nextLine());
-                if (opcao > 0 && opcao < 6) {
+                if (opcao > 0 && opcao < 4) {
                     processar(opcao,biblioteca);
 
-                } else if (opcao > 6) {
+                } else if (opcao > 4) {
                     System.out.println("Opção inválida!");
                     opcao = -1;
                 }

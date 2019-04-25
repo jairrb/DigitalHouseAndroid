@@ -76,15 +76,15 @@ public class Livro {
         this.ISBN = ISBN;
     }
 
-    public void baixaQuantidade(int quantidade){
-        if (quantidade > this.qtdestoque ){
-            System.out.println("Quantidade nao disponivel em estoque!"+
-                                "\nEstoque atual: "+this.qtdestoque);
-        }else{
+    public void baixaQuantidade(int quantidade) {
+        if (quantidade > this.qtdestoque) {
+            System.out.println("Quantidade nao disponivel em estoque!" +
+                    "\nEstoque atual: " + this.qtdestoque);
+        } else {
 
             this.qtdestoque -= quantidade;
-            System.out.println( "Quantidade vendida: "+quantidade+
-                                "\n Quantidade restante em estoque: "+this.qtdestoque+"\n");
+            System.out.println("Quantidade vendida: " + quantidade +
+                    "\n Quantidade restante em estoque: " + this.qtdestoque + "\n");
         }
 
 

@@ -62,7 +62,7 @@ public class Biblioteca {
             }
 
         } catch (Exception e) {
-            System.out.println("ERRO AO CADASTRAR"+e.getMessage());
+            System.out.println("ERRO AO CADASTRAR" + e.getMessage());
         }
 
     }
@@ -76,9 +76,9 @@ public class Biblioteca {
         int posLivro = consultarCodigo(codigo);
 
         if (posLivro != -1) {
-                System.out.println("--- LIVRO ---");
-                System.out.println(livros.get(posLivro).toString());
-        }else{
+            System.out.println("--- LIVRO ---");
+            System.out.println(livros.get(posLivro).toString());
+        } else {
             System.out.println("LIVRO NÃO ENCONTRADO! \n");
         }
     }
@@ -99,14 +99,14 @@ public class Biblioteca {
 
             System.out.println("--- VENDA LIVRO ---");
             livros.get(posLivro).baixaQuantidade(quantidade);
-        }else{
+        } else {
             System.out.println("LIVRO NÃO ENCONTRADO! \n");
         }
     }
 
-    public int consultarCodigo(String codigo){
+    public int consultarCodigo(String codigo) {
         for (int i = 0; i < livros.size(); i++) {
-            if (livros.get(i).getCodigo().equals(codigo)){
+            if (livros.get(i).getCodigo().equals(codigo)) {
                 return i;
             }
         }
