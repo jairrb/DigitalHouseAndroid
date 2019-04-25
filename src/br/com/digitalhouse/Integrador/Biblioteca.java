@@ -55,10 +55,10 @@ public class Biblioteca {
             Livro livro = new Livro(codigo, titulo, autor, lancamento, qtdestoque, ISBN, preco);
 
             if (livros.contains(livro)) {
-                System.out.println("Codigo de livro já cadastrado!\n");
+                System.out.println("CODIGO DE LIVRO JÁ CADASTRADO!\n");
             } else {
                 this.livros.add(livro);
-                System.out.println("Livro adicionado!\n");
+                System.out.println("NOVO LIVRO CADASTRADO!\n");
             }
 
         } catch (Exception e) {
