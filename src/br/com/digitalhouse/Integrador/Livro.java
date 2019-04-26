@@ -76,18 +76,26 @@ public class Livro {
         this.ISBN = ISBN;
     }
 
-    public void baixaQuantidade(int quantidade) {
-        if (quantidade > this.qtdestoque) {
-            System.out.println("Quantidade nao disponivel em estoque!" +
-                    "\nEstoque atual: " + this.qtdestoque);
-        } else {
-
+    public void baixaLivro(int quantidade) {
+        if (this.validaQtdeSolicitada(quantidade)){
             this.qtdestoque -= quantidade;
-            System.out.println("Quantidade vendida: " + quantidade +
-                    "\n Quantidade restante em estoque: " + this.qtdestoque + "\n");
+            System.out.println( "CODIGO: "+this.codigo+" TITULO: "+this.titulo+
+                    "\nQUANTIDADE VENDIDA: " + quantidade +
+                    "\nQUANTIDADE RESTANTE EM ESTOQUE: " + this.qtdestoque + "\n");
         }
 
+    }
 
+    public boolean validaQtdeSolicitada(int quantidade){
+        if (quantidade > this.qtdestoque) {
+            System.out.println( "CODIGO: "+this.codigo+" TITULO: "+this.titulo+
+                    "\nQUANTIDADE NAO DISPONIVEL EM ESTOQUE!" +
+                    "\nQUANTIDADE SOLICITADA: " +quantidade+
+                    "\nESTOQUE ATUAL: " + this.qtdestoque+ "\n");
+            return false;
+        }else{
+            return true;
+        }
     }
 
     @Override
@@ -106,12 +114,12 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Codigo: " + codigo +
-                "\nTitulo: " + titulo +
-                "\nAutor: " + autor +
-                "\nLancamento: " + lancamento +
-                "\nQuantidade Estoque: " + qtdestoque +
+        return "CODIGO: " + codigo +
+                "\nTITULO: " + titulo +
+                "\nAUTOR: " + autor +
+                "\nLANCAMENTO: " + lancamento +
+                "\nQUANTIDADE ESTOQUE: " + qtdestoque +
                 "\nISBN: " + ISBN +
-                "\nPreco: " + preco + "\n";
+                "\nPRECO: " + preco + "\n";
     }
 }

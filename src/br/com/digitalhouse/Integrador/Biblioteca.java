@@ -6,10 +6,12 @@ import java.util.Scanner;
 
 public class Biblioteca {
     List<Livro> livros = new ArrayList<>();
+    List<Colecao> colecao = new ArrayList<>();
 
     public Biblioteca(List<Livro> livros) {
         this.livros = livros;
     }
+
 
     public Biblioteca() {
     }
@@ -17,6 +19,10 @@ public class Biblioteca {
     public void addLivro(Livro livro) {
         this.livros.add(livro);
 
+    }
+
+    public void addColecao(Colecao colecao) {
+        this.colecao.add(colecao);
     }
 
     public void cadastrarLivro() {
@@ -28,28 +34,29 @@ public class Biblioteca {
         String ISBN;
         Double preco;
 
+        System.out.println("---- CADASTRAR LIVRO ----");
         try {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Digite o codigo: ");
+            System.out.println("DIGITE O CODIGO: ");
             codigo = scanner.next();
 
-            System.out.println("Digite o titulo: ");
+            System.out.println("DIGITE O TITULO: ");
             titulo = scanner.next();
 
-            System.out.println("Digite o Autor: ");
+            System.out.println("DIGITE O AUTOR: ");
             autor = scanner.next();
 
-            System.out.println("Digite o ano de lancamento: ");
+            System.out.println("DIGITE O ANO DE LANCAMENTO: ");
             lancamento = scanner.nextInt();
 
-            System.out.println("Digite a quantidade: ");
+            System.out.println("DIGITE A QUANTIDADE: ");
             qtdestoque = scanner.nextInt();
 
-            System.out.println("Digite o codigo ISBN: ");
+            System.out.println("DIGITE O CODIGO ISBN: ");
             ISBN = scanner.next();
 
-            System.out.println("Digite o preco: ");
+            System.out.println("DIGITE O PRECO: ");
             preco = scanner.nextDouble();
 
             Livro livro = new Livro(codigo, titulo, autor, lancamento, qtdestoque, ISBN, preco);
@@ -59,6 +66,7 @@ public class Biblioteca {
             } else {
                 this.livros.add(livro);
                 System.out.println("NOVO LIVRO CADASTRADO!\n");
+                System.out.println(livro.toString());
             }
 
         } catch (Exception e) {
@@ -67,50 +75,83 @@ public class Biblioteca {
 
     }
 
-    public void consultarLivro() {
+    public void consultar(int opcao) {
         String codigo;
-        Scanner scannerA = new Scanner(System.in);
-        System.out.println("Digite o codigo: ");
-        codigo = scannerA.next();
+        Scanner scanner = new Scanner(System.in);
 
-        int posLivro = consultarCodigo(codigo);
+        if (opcao == 1) {
+            System.out.println("---- CONSULTAR LIVRO ----");
+        }else{
+            System.out.println("---- CONSULTAR COLECAO ----");
+        }
 
-        if (posLivro != -1) {
-            System.out.println("--- LIVRO ---");
-            System.out.println(livros.get(posLivro).toString());
+        System.out.println("DIGITE O CODIGO: ");
+        codigo = scanner.next();
+
+        int posicao = consultarCodigo(codigo,opcao);
+
+        if (posicao != -1) {
+            if (opcao == 1) {
+                System.out.println("--- LIVRO ---");
+                System.out.println(livros.get(posicao).toString());
+            }else{
+                System.out.println("--- COLECAO ---");
+                System.out.println(colecao.get(posicao).toString());
+            }
         } else {
             System.out.println("LIVRO NÃO ENCONTRADO! \n");
         }
     }
 
-    public void venderLivro() {
+    public void vender(int opcao) {
         String codigo;
         Scanner scannerA = new Scanner(System.in);
-        System.out.println("Digite o codigo: ");
+
+        if (opcao == 1) {
+            System.out.println("---- VENDA LIVRO ----");
+        }else{
+            System.out.println("---- VENDA COLECAO ----");
+        }
+
+        System.out.println("DIGITE O CODIGO: ");
         codigo = scannerA.next();
 
-        int posLivro = consultarCodigo(codigo);
+        int pos = consultarCodigo(codigo,opcao);
 
-        if (posLivro != -1) {
+        if (pos != -1) {
             int quantidade;
             Scanner scannerB = new Scanner(System.in);
-            System.out.println("Digite a quantidade: ");
+            System.out.println("DIGITE A QUANTIDADE: ");
             quantidade = scannerB.nextInt();
 
-            System.out.println("--- VENDA LIVRO ---");
-            livros.get(posLivro).baixaQuantidade(quantidade);
-        } else {
-            System.out.println("LIVRO NÃO ENCONTRADO! \n");
+            if (opcao == 1) {
+                livros.get(pos).baixaLivro(quantidade);
+            }else{
+                colecao.get(pos).baixaColecao(quantidade);
+            }
         }
     }
 
-    public int consultarCodigo(String codigo) {
-        for (int i = 0; i < livros.size(); i++) {
-            if (livros.get(i).getCodigo().equals(codigo)) {
-                return i;
+    public int consultarCodigo(String codigo,int opcao) {
+        if (opcao == 1) {
+            for (int i = 0; i < livros.size(); i++) {
+                if (livros.get(i).getCodigo().equals(codigo)) {
+                    return i;
+                }
+            }
+        }else{
+            for (int i = 0; i < colecao.size(); i++) {
+                if (colecao.get(i).getCodigo().equals(codigo)) {
+                    return i;
+                }
             }
         }
-        return -1;
 
+        if (opcao == 1) {
+            System.out.println("LIVRO NÃO ENCONTRADO! \n");
+        }else{
+            System.out.println("COLECAO NÃO ENCONTRADO! \n");
+        }
+            return -1;
     }
 }
